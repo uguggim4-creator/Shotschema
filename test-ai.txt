@@ -1,4 +1,0 @@
-[dotenv@17.3.1] injecting env (2) from .env -- tip: ?? encrypt with Dotenvx: https://dotenvx.com
-Fetching raw CometAPI...
-Status: 503 Service Unavailable
-Body: {"error":{"code":"model_not_found","message":"no available channel for group default and model google/gemini-3-flash (distributor) (request id: 20260225155453950933735ZMDV8mNB)","type":"comet_api_error"}}

@@ -13,6 +13,17 @@
 # testing
 /coverage
 
+# local test/debug scripts (root level)
+test-ai.ts
+test-ai-2.ts
+test-ai.ts
+test-comet-google.ts
+test_loader.ts
+fetch-models.ts
+list.json
+*.out
+*.log
+
 # next.js
 /.next/
 /out/
