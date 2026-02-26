@@ -1,4 +1,4 @@
-import { streamText, StreamTextResult } from 'ai';
+import { streamText } from 'ai';
 import { getModel } from '../../model-factory';
 import { loadCategoryManuals } from '../../manual-loader';
 import { ContentCategory } from '../../memory/state-manager';
@@ -19,7 +19,7 @@ export abstract class BaseIdeaAgent {
         protected readonly model: string = 'gemini-3-flash'
     ) { }
 
-    async generateIdeaStream(prompt: string): Promise<StreamTextResult<Record<string, never>, string>> {
+    async generateIdeaStream(prompt: string) {
         console.log(`[IdeaAgent:${this.category}] 아이디어 생성 (모델: ${this.model})`);
         const coreModel = getModel(this.model, this.apiKey);
         const ctx = categoryIdeaContext[this.category];
@@ -36,7 +36,7 @@ ${manuals ? `\n--- [참고용 배경 지식] ---\n${manuals}\n--- [참고용 배
         });
     }
 
-    async generatePlotStream(idea: string): Promise<StreamTextResult<Record<string, never>, string>> {
+    async generatePlotStream(idea: string) {
         console.log(`[IdeaAgent:${this.category}] 줄거리 생성 (모델: ${this.model})`);
         const coreModel = getModel(this.model, this.apiKey);
         const ctx = categoryIdeaContext[this.category];
