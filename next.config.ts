@@ -3,6 +3,7 @@ import type { NextConfig } from "next";
 const allowedOrigins = [
   "https://www.ainspire.co.kr",
   "https://ainspire.co.kr",
+  "https://shotschema-dmdu.vercel.app",
   "http://localhost:3000",
 ];
 
